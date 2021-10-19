@@ -1,0 +1,112 @@
+<div fxLayout fxLayoutAlign="space-around" style="margin-top: 30px;margin-bottom: 30px;">
+    <div *ngIf="!xsdevice && !smdevice">
+    <mat-card class="example-card" fxFlex="25rem" height="500px" *ngFor="let laptop of laptops" style="margin-left:30px"> 
+        <img class="card-img-top" [src]="laptop.imgSrc" height="200px" width="100%" alt="Card image cap">
+        <div class="card-img-overlay">
+            <h5 class="card-title" style="color: red;">{{laptop.productName | uppercase}}</h5>
+        </div> 
+        <mat-card-content>
+          <p>Product ID : {{laptop.productId}}</p>
+          <p>Product Name : {{laptop.productName}}</p>
+          <p>Product Instock : {{laptop.inStock}}</p> 
+          <del><p [ngStyle]="{color:laptop.isVeg?'green':'red'}">Product Price : {{laptop.price | currency:'INR':'code'}}</p></del>  
+          <p style="color: blue;">Discount Price : {{laptop.price | laptopFilter:laptop.productName | currency:'INR':'code'}}</p>  
+          <span [ngSwitch]="laptop.country">Country : 
+            <img *ngSwitchCase="'India'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
+                  width="24"    
+            >
+            <img *ngSwitchCase="'Australia'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+                  width="24"  
+            > 
+            <img *ngSwitchCase="'Germany'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+                  width="24"  
+            >  
+          </span><br><br> 
+          <mat-card-actions style="margin-left:3rem;" fxLayoutGap="1.5rem">
+            <button mat-raised-button color="warn" (click)="removeLapQuentity(laptop)" style="position: relative;">Remove</button> 
+              <span>{{ laptop.quentity}}</span> 
+            <button mat-raised-button color="primary" (click)="addLapQuentity(laptop)" style="position: relative;">Add</button> 
+        </mat-card-actions>
+        </mat-card-content> 
+    </mat-card>
+    </div> 
+
+
+    <div *ngIf="smdevice"> 
+        <mat-card class="example-card" fxFlex="50%" height="500px" *ngFor="let laptop of laptops" style="margin-left:30px"> 
+            <div fxLayout="column">
+            <img class="card-img-top" [src]="laptop.imgSrc" height="200px" width="100%" alt="Card image cap">
+            <div class="card-img-overlay">
+                <h5 class="card-title" style="color: red;">{{laptop.productName | uppercase}}</h5>
+            </div> 
+            <mat-card-content>
+              <p>Product ID : {{laptop.productId}}</p>
+              <p>Product Name : {{laptop.productName}}</p>
+              <p>Product Instock : {{laptop.inStock}}</p> 
+              <del><p [ngStyle]="{color:laptop.isVeg?'green':'red'}">Product Price : {{laptop.price | currency:'INR':'code'}}</p></del>  
+              <p style="color: blue;">Discount Price : {{laptop.price | laptopFilter:laptop.productName | currency:'INR':'code'}}</p>  
+              <span [ngSwitch]="laptop.country">Country : 
+                <img *ngSwitchCase="'India'"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
+                      width="24"    
+                >
+                <img *ngSwitchCase="'Australia'"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+                      width="24"  
+                > 
+                <img *ngSwitchCase="'Germany'"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+                      width="24"  
+                >  
+              </span><br><br> 
+              <mat-card-actions fxLayout="column" style="width: 10rem;margin-left: 2rem;" fxLayoutGap="1.5rem">
+                <button mat-raised-button color="warn" (click)="removeLapQuentity(laptop)" style="position: relative;">Remove</button> 
+                  <span>{{ laptop.quentity}}</span> 
+                <button mat-raised-button color="primary" (click)="addLapQuentity(laptop)" style="position: relative;">Add</button> 
+            </mat-card-actions>
+            </mat-card-content> 
+            </div> 
+        </mat-card>  
+    </div> 
+
+
+    <div *ngIf="xsdevice" fxLayout="column"> 
+    <mat-card class="example-card" fxFlex="50%" height="500px" *ngFor="let laptop of laptops" style="margin-bottom:30px"> 
+        <div >
+        <img class="card-img-top" [src]="laptop.imgSrc" height="200px" width="100%" alt="Card image cap">
+        <div class="card-img-overlay">
+            <h5 class="card-title" style="color: red;">{{laptop.productName | uppercase}}</h5>
+        </div> 
+        <mat-card-content>  
+          <p>Product ID : {{laptop.productId}}</p>
+          <p>Product Name : {{laptop.productName}}</p>
+          <p>Product Instock : {{laptop.inStock}}</p> 
+          <del><p [ngStyle]="{color:laptop.isVeg?'green':'red'}">Product Price : {{laptop.price | currency:'INR':'code'}}</p></del>  
+          <p style="color: blue;">Discount Price : {{laptop.price | laptopFilter:laptop.productName | currency:'INR':'code'}}</p>  
+          <span [ngSwitch]="laptop.country">Country : 
+            <img *ngSwitchCase="'India'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
+                  width="24"    
+            >
+            <img *ngSwitchCase="'Australia'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+                  width="24"  
+            > 
+            <img *ngSwitchCase="'Germany'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+                  width="24"  
+            >  
+          </span><br><br> 
+          <mat-card-actions style="margin-left:3rem;" fxLayoutGap="1.5rem">
+            <button mat-raised-button color="warn" (click)="removeLapQuentity(laptop)" style="position: relative;">Remove</button> 
+              <span>{{ laptop.quentity}}</span> 
+            <button mat-raised-button color="primary" (click)="addLapQuentity(laptop)" style="position: relative;">Add</button> 
+        </mat-card-actions>
+        </mat-card-content> 
+        </div> 
+    </mat-card>  
+    </div> 
+</div>    

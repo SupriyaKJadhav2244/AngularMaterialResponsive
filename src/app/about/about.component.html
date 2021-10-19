@@ -1,0 +1,239 @@
+<div class="about-section">
+    <h1>About Top Businessman</h1>
+    <p>Information about top businessman in India</p>
+    <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
+</div>
+  
+  <!-- <h2 style="text-align:center">Our Team</h2> -->
+  <div class="row" *ngIf="!xsdevice && !smdevice">
+    <div class="column">
+      <div class="card box" style="padding-bottom: 10px;width: 100%;">
+        <img src="./assets/dc-Cover-o30mtl4lka5pmp17bj1qbkb2e5-20161105103741.Medi.jpeg" alt="Ratan Tata" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Ratan Tata</h2>
+          <p class="title">CEO & Founder of TATA Group</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+                <p>
+                  Ratan Tata was born in Bombay, now Mumbai, on
+                    28 December 1937,[7] and is the son of Naval Tata (born in Surat).
+                </p> 
+          <!-- <p><button class="button">Contact</button></p> --> 
+          </mat-expansion-panel>
+          </mat-accordion> 
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card" style="padding-bottom: 10px;width: 100%;">
+        <img src="./assets/download (1).jpg" alt="Narayan Murthi" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Narayan Murthi</h2>
+          <p class="title">CEO & Founder of Infosys Pvt.Ltd</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+                <p>Narayana Murthy CBE LH (born 20 August 1946) is an Indian billionaire businessman. He is the 
+                  founder of Infosys,[5] and has been the chairman, chief executive officer (CEO), president, 
+                  and chief mentor[6] of the company</p>
+          <!-- <p><button class="button">Contact</button></p> -->
+          </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card" style="padding-bottom: 10px;width: 100%;">
+        <img src="./assets/8aad1eb2-d2b4-11eb-b286-b459bd73bf37_1627118543650_1631708462377.webp" 
+                alt="Mukesh Ambani" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Mukesh Ambani</h2>
+          <p class="title">CEO & Founder of Reliance Industry</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+          <p>Mukesh Dhirubhai Ambani (born 19 April 1957) is an Indian billionaire businessman, and the 
+              chairman, managing director, and largest shareholder of Reliance Industries Ltd.</p>  
+            </mat-expansion-panel> 
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row" *ngIf="xsdevice" fxLayout="column">
+    <div class="column" style="width: 75%;display: block;">
+      <div class="card box" style="padding-bottom: 10px;">
+        <img src="./assets/dc-Cover-o30mtl4lka5pmp17bj1qbkb2e5-20161105103741.Medi.jpeg" alt="Ratan Tata" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Ratan Tata</h2>
+          <p class="title">CEO & Founder of TATA Group</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+                <p>
+                  Ratan Tata was born in Bombay, now Mumbai, on
+                    28 December 1937,[7] and is the son of Naval Tata (born in Surat).
+                </p> 
+          <!-- <p><button class="button">Contact</button></p> --> 
+          </mat-expansion-panel>
+          </mat-accordion> 
+        </div>
+      </div>
+    </div>
+  
+    <div class="column" style="width: 75%;">
+      <div class="card" style="padding-bottom: 10px;">
+        <img src="./assets/download (1).jpg" alt="Narayan Murthi" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Narayan Murthi</h2>
+          <p class="title">CEO & Founder of Infosys Pvt.Ltd</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+                <p>Narayana Murthy CBE LH (born 20 August 1946) is an Indian billionaire businessman. He is the 
+                  founder of Infosys,[5] and has been the chairman, chief executive officer (CEO), president, 
+                  and chief mentor[6] of the company</p>
+          <!-- <p><button class="button">Contact</button></p> -->
+          </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column"  style="width: 75%;">
+      <div class="card" style="padding-bottom: 10px;">
+        <img src="./assets/8aad1eb2-d2b4-11eb-b286-b459bd73bf37_1627118543650_1631708462377.webp" 
+                alt="Mukesh Ambani" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Mukesh Ambani</h2>
+          <p class="title">CEO & Founder of Reliance Industry</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+          <p>Mukesh Dhirubhai Ambani (born 19 April 1957) is an Indian billionaire businessman, and the 
+              chairman, managing director, and largest shareholder of Reliance Industries Ltd.</p>  
+            </mat-expansion-panel> 
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row" *ngIf="smdevice" fxLayout="column">
+    <div class="column" style="width: 50%;">
+      <div class="card box" style="padding-bottom: 10px">
+        <img src="./assets/dc-Cover-o30mtl4lka5pmp17bj1qbkb2e5-20161105103741.Medi.jpeg" alt="Ratan Tata" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Ratan Tata</h2>
+          <p class="title">CEO & Founder of TATA Group</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+                <p>
+                  Ratan Tata was born in Bombay, now Mumbai, on
+                    28 December 1937,[7] and is the son of Naval Tata (born in Surat).
+                </p> 
+          <!-- <p><button class="button">Contact</button></p> --> 
+          </mat-expansion-panel>
+          </mat-accordion> 
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card" style="padding-bottom: 10px;width: 100%;">
+        <img src="./assets/download (1).jpg" alt="Narayan Murthi" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Narayan Murthi</h2>
+          <p class="title">CEO & Founder of Infosys Pvt.Ltd</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+                <p>Narayana Murthy CBE LH (born 20 August 1946) is an Indian billionaire businessman. He is the 
+                  founder of Infosys,[5] and has been the chairman, chief executive officer (CEO), president, 
+                  and chief mentor[6] of the company</p>
+          <!-- <p><button class="button">Contact</button></p> -->
+          </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card" style="padding-bottom: 10px;width: 100%;">
+        <img src="./assets/8aad1eb2-d2b4-11eb-b286-b459bd73bf37_1627118543650_1631708462377.webp" 
+                alt="Mukesh Ambani" style="width:100%;height: 15rem;">
+        <div class="container">
+          <h2>Mukesh Ambani</h2>
+          <p class="title">CEO & Founder of Reliance Industry</p>
+          <mat-accordion >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p *ngIf="!panelOpenState==true">More...</p>
+                  <p *ngIf="panelOpenState==true">Less...</p>
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+          <p>Mukesh Dhirubhai Ambani (born 19 April 1957) is an Indian billionaire businessman, and the 
+              chairman, managing director, and largest shareholder of Reliance Industries Ltd.</p>  
+            </mat-expansion-panel> 
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,51 @@
+<div class="mainBox">
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayoutAlign="space-between center"> 
+        <div fxLayout="row">
+            <button mat-button>
+                <mat-icon>home</mat-icon>&nbsp;&nbsp;
+                <strong style="font-size: 2rem;">Angular Material</strong>
+            </button>
+            <div *ngIf="!Device">  
+                <button mat-button [routerLink]="['/login']">Login</button>
+                <button mat-button [routerLink]="['/registration']">Registration</button>
+                <button mat-button [routerLink]="['/products']">Products</button>
+            </div>
+        </div> 
+        <div>
+            <button mat-icon-button [matMenuTriggerFor]="menu">  
+              <mat-icon *ngIf="Device">more_vert</mat-icon>
+              <span *ngIf="!Device">Menu</span>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>home</mat-icon>
+                  <span>
+                      <a [routerLink]="['/home']" style="text-decoration: none;">Home</a>
+                    </span>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item>
+                  <mat-icon>address</mat-icon>
+                  <span>
+                    <a [routerLink]="['/about']" style="text-decoration: none;">About</a>
+                </span>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item disabled>
+                  <mat-icon>address</mat-icon>
+                  <span>Contact Us</span>
+                </button>
+              </mat-menu>
+            </button>  
+        </div>
+      
+    </mat-toolbar-row>
+    <mat-toolbar-row *ngIf="Device" fxLayoutAlign="space-between end"> 
+            <button mat-button [routerLink]="['/login']">Login</button>
+            <button mat-button [routerLink]="['/registration']">Registration</button>
+            <button mat-button [routerLink]="['/products']">Products</button> 
+    </mat-toolbar-row>
+</mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>
