@@ -11,8 +11,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';  
-import { MatGridListModule } from '@angular/material/grid-list'; 
 import { MatExpansionModule } from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 const angularMaterial = [
@@ -25,9 +25,9 @@ const angularMaterial = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatMenuModule,
-  MatDividerModule,
-  MatGridListModule,
-  MatExpansionModule  
+  MatDividerModule, 
+  MatExpansionModule,
+  MatGridListModule  
 ]
 
 @NgModule({
